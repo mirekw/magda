@@ -1,0 +1,21 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<div id="header">
+  <%= link_to logo, root_path %>
+  <ul class="account-links inline">
+<% if logged_in? %>
+      <li><%= link_to "Profile", current_user %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+<% else %>
+       <li id ="account_login"><%= link_to "Login",login_path %></li>
+<% end %>
+     
+  </ul>
+  <ul class="info-links inline">
+    <li><%= link_to( 'Home',root_path ) %></li>
+    <li><%= link_to( 'Help')%></li>
+
+  </ul>
+</div>
